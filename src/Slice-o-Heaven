@@ -1,0 +1,66 @@
+public class SliceoHeaven {
+
+    public String storeAddress;
+
+    private String storeMenu;
+    private String pizzaIngredients;
+    private double pizzaPrice;
+    private String sides;
+    private String drinks;
+
+    public String storeHours;
+    public long storePhone;
+    public String storeEmail;
+    public String storeWebsite;
+
+    private String orderID;
+    private String orderDetails;
+    private String orderStatus;
+    private double orderTotal;
+
+    public void takeOrder(String id, String details, double total){
+        orderID = id;
+        orderDetails = details;
+        orderTotal = total;
+
+        System.out.println("Our Menu: " + storeMenu);
+        System.out.println("Sides: " + sides);
+        System.out.println("Drinks: " + drinks);
+
+        System.out.println("Order accepted!");
+
+        System.out.println("Order is being prepared");
+
+        try{
+            Thread.sleep(5000);
+        } catch (InterruptedException e){
+            System.out.println("Order is ready for pickup!");
+        }
+
+        System.out.println("Your order is ready!");
+
+        printReceipt();
+    
+    }
+
+    public void makePizza(){
+        System.out.println("Preparing your pizza with the following ingredients: " + pizzaIngredients);
+       
+    }
+    
+    private void printReceipt(){
+        System.out.println("********RECEIPT********");
+
+        System.out.println("Store Name: Slice-o-Heaven");
+        System.out.println("Store Address: " + storeAddress);
+        System.out.println("Store Phone: " + storePhone);
+        System.out.println("Store Email: " + storeEmail);
+        System.out.println("Store Website: " + storeWebsite);
+        System.out.println("Store Hours: " + storeHours);
+        System.out.println("Order ID: " + orderID);
+        System.out.println("Order Details: " + orderDetails);
+        System.out.println("Order Total: $" + orderTotal);
+        System.out.println("Order Status: " + orderStatus);
+    }
+    
+}
