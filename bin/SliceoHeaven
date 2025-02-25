@@ -1,5 +1,9 @@
 public class SliceoHeaven {
 
+    private final String DEF_ORDER_ID = "DEF-SOH-099";
+    private final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
+    private final double DEF_ORDER_TOTAL = 15.00;
+
     public String storeAddress;
 
     private String storeMenu;
@@ -18,6 +22,43 @@ public class SliceoHeaven {
     private String orderStatus;
     private double orderTotal;
 
+    public SliceoHeaven() {
+        this.orderID = DEF_ORDER_ID;
+        this.pizzaIngredients = DEF_PIZZA_INGREDIENTS;
+        this.orderTotal = DEF_ORDER_TOTAL;
+        this.sides;
+        this.drinks;
+    }
+
+    public SliceoHeaven(String orderID, String pizzaIngredients, double orderTotal) {
+        this.orderID = orderID;
+        this.pizzaIngredients = pizzaIngredients;
+        this.orderTotal = orderTotal;
+    }
+
+    public String getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(String orderID) {
+        this.orderID = orderID;
+    }
+
+    public String getPizzaIngredients() {
+        return pizzaIngredients;
+    }
+
+    public void setPizzaIngredients(String pizzaIngredients) {
+        this.pizzaIngredients = pizzaIngredients;
+    }
+
+    public double getOrderTotal() {
+        return orderTotal;
+    }
+
+    public void setOrderTotal(double orderTotal) {
+        this.orderTotal = orderTotal;
+    
     public void takeOrder(String id, String details, double total){
         orderID = id;
         orderDetails = details;
@@ -28,7 +69,6 @@ public class SliceoHeaven {
         System.out.println("Drinks: " + drinks);
 
         System.out.println("Order accepted!");
-
         System.out.println("Order is being prepared");
 
         try{
