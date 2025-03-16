@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class SliceoHeaven {
-
+// final
     private static final double PIZZA_BASE_PRICE = 10.0;
     private static String[] pizzasOrdered = new String[10];
     private static String[] pizzaSizesOrdered = new String[10];
@@ -205,6 +205,7 @@ public class SliceoHeaven {
             return;
         }
 
+        
 
         pizzasOrdered[orderCount] = pizzaDetails;
         totalOrderPrice += pizzaPrice;
